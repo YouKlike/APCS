@@ -1,0 +1,1 @@
+print((lambda time: "At School" if 1020 > time[0]*60+time[1] >= 450 else "Off School")([int(i) for i in input().split()]))
