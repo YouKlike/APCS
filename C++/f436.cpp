@@ -6,13 +6,13 @@ int main() {
     
     do {
         int K,N,M;
-        int X[50] , Y[50];
+        int X[10] , Y[10];
         cin >> K;
         if (K == 0) break;
         cin >> N >> M;
-        for(int i = 0; i < K; i++) {
+        for(int i = 0; i < K; i++) 
             cin >> X[i] >> Y[i];
-        }
+        
         for(int i = 0; i < K;i++) {
             if (X[i] == N || Y[i] == M) 
                 cout << "divisa" << endl;       
@@ -22,7 +22,7 @@ int main() {
                 cout << "NO" << endl;
             else if (X[i] > N && Y[i] < M)
                 cout << "SE" << endl;
-            else if (X[i] < N && X[i] < M)
+            else if (X[i] < N && Y[i] < M)
                 cout << "SO" << endl;
         }
     }while (true);
