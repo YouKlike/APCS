@@ -6,7 +6,7 @@ int main() {
     
     do {
         int K,N,M;
-        int X[10] , Y[10];
+        int X[1000] , Y[1000];
         cin >> K;
         if (K == 0) break;
         cin >> N >> M;
@@ -15,15 +15,15 @@ int main() {
         
         for(int i = 0; i < K;i++) {
             if (X[i] == N || Y[i] == M) 
-                cout << "divisa" << endl;       
+                cout << "divisa\n";       
             else if (X[i] > N && Y[i] > M)
-                cout << "NE" << endl;
+                cout << "NE\n";
             else if (X[i] < N && Y[i] > M) 
-                cout << "NO" << endl;
+                cout << "NO\n";
             else if (X[i] > N && Y[i] < M)
-                cout << "SE" << endl;
+                cout << "SE\n";
             else if (X[i] < N && Y[i] < M)
-                cout << "SO" << endl;
+                cout << "SO\n";
         }
-    }while (true);
+    } while (true);
 }
