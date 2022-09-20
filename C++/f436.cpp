@@ -12,7 +12,7 @@ int main() {
         cin >> N >> M;
         for(int i = 0; i < K; i++) 
             cin >> X[i] >> Y[i];
-        int a;
+            
         for(int i = 0; i < K;i++) {
             if (X[i] == N || Y[i] == M) 
                 cout << "divisa\n";       
