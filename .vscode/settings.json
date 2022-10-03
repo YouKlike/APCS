@@ -4,7 +4,10 @@
         "ostream": "cpp",
         "cmath": "cpp",
         "utility": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
