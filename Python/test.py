@@ -1,11 +1,8 @@
-from turtle import *
-color("red")
-begin_fill()
-pensize(3)
-left(50)
-forward(133)
-circle(50,200)
-right(140)
-circle(50,200)
-forward(133)
-end_fill()
+from pwn import *
+r = remote('120.114.62.214',2403)
+r.recvline(3)
+for i in range(100):
+    r.recvline(2)
+    r.sendline(str(i+1).encode())
+    
+print(r.recvline().decode())
