@@ -7,7 +7,7 @@ int main() {
         int sum = 0;
         cin >> a >> b;
         for (int j = a; j <= b;j++) 
-            if (j%2 == 1) sum += j; // 1 + 3 + 5 
+            if (j%2 == 1) sum += j;
         cout << "Case " << i+1 << ": " << sum << "\n";
     }
 }
