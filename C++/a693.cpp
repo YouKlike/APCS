@@ -1,19 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int n,m;
+    int n,m,f,t;
+    int satiety[100010];
     while (cin >> n >> m) {
-        int satiety[n];
-        for (int i = 0;i < n;i++) cin >> satiety[i];
-        for (int i = 0;i < m;i++) {
-            int l , r , ans = 0;
-            cin >> l >> r;
-            for (int j = l-1;j < r;j++) {
-                ans += satiety[j];
-            }
-            cout << ans << "\n";
+        for (int i = 1;i <= n;i++) {
+            cin >> satiety[i];
+            satiety[i] += satiety[i - 1];
+        }
+        for (int i = 1;i <= m;i++) {
+            cin >> f >> t;
+            cout << satiety[t] - satiety[f-1] << "\n";
         }
     }
 }

@@ -22,4 +22,4 @@ int main() {
         ans += (group[i] == i);
     }
     cout << ans << "\n";
-}
+}ubㄏㄛ
