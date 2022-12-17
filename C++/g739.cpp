@@ -5,7 +5,10 @@ int main() {
     cin.tie(0);
     int n,m,k,ans = 0;
     cin >> n >> m >> k;
-    int G[n][m] = {0};
+    int **G = new int*[n]();
+    for (int i = 0;i < n;i++) {
+        G[i] = new int[m]();
+    }
     for (int i = 0;i < k;i++) {
         int x1,x2;
         cin >> x1 >> x2;
@@ -23,7 +26,7 @@ int main() {
             for (int k = i+1,h = j+1;k < n && h < m;k++,h++) { // 左上至右下
                 if (G[k][h] == 0) ans += 1;
             }
-            for (int k = i+1,h = j-1;k <= n && h >= 0;k++,h--) { // 左下至右上
+            for (int k = i+1,h = j-1;k < n && h >= 0;k++,h--) { // 左下至右上
                 if (G[k][h] == 0) ans += 1;
             }
         }
