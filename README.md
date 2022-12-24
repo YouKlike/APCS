@@ -1,3 +1,5 @@
 # APCS
 
-練習題目用代碼
+Website: https://zerojudge.tw/
+
+關於我的 zerojudge 的解題紀錄
