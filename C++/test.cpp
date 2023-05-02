@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-int dp[1001][1001];
 int main() {
-    vector<vector<int>> dp(N+1),vector<int>(M, INF);
-    dp[0][0] = 0;
+    int num[] = {0,5,6,3,4,-2},min = 1000000;
+    for(int i = 0; i<7; i++) {
+        if(min > num[i]) min = num[i];
+    }
+    cout << min;
 }

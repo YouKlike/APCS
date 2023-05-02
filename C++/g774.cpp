@@ -7,12 +7,12 @@ struct Player {
     Player(int B,int G) {
         Boy = B;
         Girl = G;
-        diff = abs(B - G); 
+        diff = B - G; 
     }
 };
 vector<Player> v; 
 bool cmp(Player x,Player y) { // 計算 男生 - 女生 最大差
-    if (x.diff == y.diff) return x.diff;
+    if (x.diff == y.diff) return x.Boy < y.Boy;
     return x.diff < y.diff;
 }
 
@@ -27,9 +27,9 @@ int main() {
     sort(v.begin(), v.end(), cmp);
     int sum = 0;
     for(int i = 0;i < N+M;i++) {
-        if(i < N) sum += v[i].Boy; // 取前N個女生
-        else sum += v[i].Girl; // 取後M個男生
+        if(i < N) sum += v[i].Boy; // 取前N個男生
+        else sum += v[i].Girl; // 取後M個女生
     }
-    cout << sum << endl;
+    cout << sum;
     return 0;
 }
