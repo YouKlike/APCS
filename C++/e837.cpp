@@ -4,9 +4,7 @@ int main() {
     string s0, s1;
     int left, right;
     int len0 = 0, len1;
-
     cin >> s0;
-
     left = 0;
     while(left < s0.length()) {
         len1 = 1;

@@ -10,8 +10,9 @@ int main() {
     int L = 0,R = n - 1;
     while(L <= R) {
         ans++;
+        cout << "L: " << L << " R: " << R << " ";
         if(gift[L] + gift[R] <= w) { 
-            L++;
+            L++; // 0->8, 0->7, 0->6, 1->5, 2->4, 3->3
             R--;
         } else R--; // 從最右邊減去
     }
