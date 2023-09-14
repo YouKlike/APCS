@@ -1,9 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main() {
-    int num[] = {0,5,6,3,4,-2},min = 1000000;
-    for(int i = 0; i<7; i++) {
-        if(min > num[i]) min = num[i];
+#define MAXN 100001
+
+struct Stack{
+    int arr[MAXN], now;
+    Stack() : now(0) {}
+    int top(){ // 回傳 stack 最頂端的值
+        return arr[now-1];
     }
-    cout << min;
+    void pop(){ // 刪除 stack 頂端資料
+        now--;
+    }
+    void push(int val){ // 新增一筆 val 到 stack 的最頂端
+        arr[now++] = val;
+    }
+    int size(){ // 回傳 stack 大小
+        return now;
+    }
 }
